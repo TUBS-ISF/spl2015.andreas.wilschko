@@ -1,38 +1,166 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<featureModel chosenLayoutAlgorithm="1">
 		<struct>
-			<and abstract="true" mandatory="true" name="Chat-Social-Blog-Client">
-				<and mandatory="true" name="accounting">
+			<and abstract="true" mandatory="true" name="Chat-Blog-Client">
+				<description>
+					Dieses Modell stellt eine Software produktlinie für Software zum Aufsetzten eines Chats oder eines Blogs oder eine Kombination aus beidem
+					
+				</description>
+				<and mandatory="true" name="Identification">
+					<description>
+						Die Identifikation einer Person zur Verwendung des Systems
+					</description>
 					<feature mandatory="true" name="Login">
 						<description>
-							 
+							Der login einer Person besteht aus jeweils einen Nutzernamen und einem Password
 						</description>
 					</feature>
-					<feature mandatory="true" name="Create Account"/>
+					<feature mandatory="true" name="Create Account">
+						<description>
+							Das Erstellen eines Nutzers durch eine noch nicht eingetragene Person
+							soll möglich sein
+						</description>
+					</feature>
 				</and>
 				<alt mandatory="true" name="Distribution of History">
-					<feature mandatory="true" name="unsaved"/>
-					<feature mandatory="true" name="locally saved"/>
-					<feature mandatory="true" name="saved on Server"/>
+					<description>
+						Der Inhalt von Nachrichtenverläufen kann auf mehrere Arten
+						 gespeichert werden
+					</description>
+					<feature mandatory="true" name="unsaved">
+						<description>
+							Nachrichtenverläufe werden nicht erfasst
+						</description>
+					</feature>
+					<feature mandatory="true" name="locally saved">
+						<description>
+							Nachrichtenverläufe werden lokal bei allen Personen, 
+							die die Nachricht senden/empfangen gespeichert
+						</description>
+					</feature>
+					<feature mandatory="true" name="saved on Server">
+						<description>
+							Nachrichtenverläufe werden auf dem Server gespeichert
+						</description>
+					</feature>
 				</alt>
 				<and mandatory="true" name="Content of Account">
-					<feature mandatory="true" name="Account name"/>
-					<feature mandatory="true" name="Emailadress"/>
-					<feature name="Picture"/>
-					<feature name="Person Meta-Data"/>
-					<feature name="User Role"/>
+					<description>
+						Der Inahlt eines Accounts kann verschiedene Informationen umfassen
+						
+					</description>
+					<feature mandatory="true" name="Account name">
+						<description>
+							Der Accountname eines Benutzers
+						</description>
+					</feature>
+					<feature name="Emailadress">
+						<description>
+							Die Emailadresse eines Nutzers
+						</description>
+					</feature>
+					<feature name="Picture">
+						<description>
+							Das Bild eines Nutzers
+						</description>
+					</feature>
+					<feature name="Person Meta-Data">
+						<description>
+							Meta-Infos zum Nutzer (Name, Geschlecht, Alter, etc.)
+						</description>
+					</feature>
+					<feature name="User Role">
+						<description>
+							Die Rolle und die Rechte über die ein Account verfügt( Admin, Moderator, etc.)
+						</description>
+					</feature>
 				</and>
-				<and name="Specification of System type">
-					<and name="Blog">
-						<feature name="Clustering of the"/>
-					</and>
-					<feature name="Social"/>
-					<feature name="Chat"/>
-				</and>
-				<alt name="Data Transfer">
-					<feature mandatory="true" name="unsecure"/>
-					<feature mandatory="true" name="secure"/>
+				<alt mandatory="true" name="Data/Message Transfer">
+					<description>
+						Der Nachrichtentransfer zwischen Server und Client
+					</description>
+					<feature mandatory="true" name="unsecure">
+						<description>
+							unverschlüsselter Transfer von Nachrichten
+						</description>
+					</feature>
+					<feature mandatory="true" name="secure">
+						<description>
+							verschlüsselter Transfer von Nachrichten
+						</description>
+					</feature>
 				</alt>
+				<or mandatory="true" name="Specification of System type">
+					<description>
+						Die eigentliche Aufgabe/n der Software
+					</description>
+					<and mandatory="true" name="Blog">
+						<description>
+							Implementierung eines Blogs
+						</description>
+						<and mandatory="true" name="Clustering of the Blog">
+							<description>
+								Die Strukturierung des Blogs
+							</description>
+							<and mandatory="true" name="Domains">
+								<description>
+									Die Domäne (Probleme, Wiki, etc) als oberste Struktur
+								</description>
+								<feature mandatory="true" name="Topics of Entries">
+									<description>
+										Konkrete Themen innerhalb der Domänen
+									</description>
+								</feature>
+							</and>
+						</and>
+						<feature name="Adding Content to Topics within Blog">
+							<description>
+								Neue Themen können von bestimmten Nutzern hinzugefügt
+								werden
+							</description>
+						</feature>
+						<feature name="subscribe to Topic">
+							<description>
+								Nutzer können Nachrichten erhalten, wenn neue Beiträge zu einem Thema getätigt werden
+							</description>
+						</feature>
+					</and>
+					<and mandatory="true" name="Chat">
+						<description>
+							Implementierung eines Chats
+						</description>
+						<and mandatory="true" name="Visibility">
+							<description>
+								Die Sichtbarkeit des Chats
+							</description>
+							<feature name="public Chat">
+								<description>
+									ein öffentlicher Chat
+								</description>
+							</feature>
+							<feature name="private Chat">
+								<description>
+									ein privater Chat
+								</description>
+							</feature>
+						</and>
+						<and mandatory="true" name="Chat options">
+							<description>
+								Die Optionen des Aufbaus des Chats (1..1, N..N, etc)
+							</description>
+							<feature name="2 Persons">
+								<description>
+									simpler 2 Personen Chat
+								</description>
+							</feature>
+							<feature name="Group">
+								<description>
+									Gruppenchat
+								</description>
+							</feature>
+						</and>
+					</and>
+				</or>
 			</and>
 		</struct>
 		<constraints/>
