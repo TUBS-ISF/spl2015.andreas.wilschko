@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<featureModel chosenLayoutAlgorithm="1">
 		<struct>
-			<and abstract="true" mandatory="true" name="AndreasWilschkoTask1">
-				<feature name="Base"/>
+			<and abstract="true" mandatory="true" name="Chat-Social-Blog-Client">
+				<and mandatory="true" name="accounting">
+					<feature mandatory="true" name="Login"/>
+					<feature mandatory="true" name="Create Account"/>
+					<feature name="NewLayer1"/>
+				</and>
+				<feature mandatory="true" name="Distribution"/>
+				<feature name="Blog"/>
+				<feature name="Social"/>
+				<feature name="Chat"/>
 			</and>
 		</struct>
-		<constraints/>
+		<constraints>
+			<rule>
+				<disj>
+					<conj>
+						<var>accounting</var>
+						<conj>
+							<var>Distribution</var>
+							<var>Blog</var>
+						</conj>
+					</conj>
+					<disj>
+						<var>Chat</var>
+						<var>Social</var>
+					</disj>
+				</disj>
+			</rule>
+		</constraints>
 		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
 		<comments/>
 		<featureOrder userDefined="false"/>
