@@ -3,33 +3,39 @@
 		<struct>
 			<and abstract="true" mandatory="true" name="Chat-Social-Blog-Client">
 				<and mandatory="true" name="accounting">
-					<feature mandatory="true" name="Login"/>
+					<feature mandatory="true" name="Login">
+						<description>
+							 
+						</description>
+					</feature>
 					<feature mandatory="true" name="Create Account"/>
-					<feature name="NewLayer1"/>
 				</and>
-				<feature mandatory="true" name="Distribution"/>
-				<feature name="Blog"/>
-				<feature name="Social"/>
-				<feature name="Chat"/>
+				<alt mandatory="true" name="Distribution of History">
+					<feature mandatory="true" name="unsaved"/>
+					<feature mandatory="true" name="locally saved"/>
+					<feature mandatory="true" name="saved on Server"/>
+				</alt>
+				<and mandatory="true" name="Content of Account">
+					<feature mandatory="true" name="Account name"/>
+					<feature mandatory="true" name="Emailadress"/>
+					<feature name="Picture"/>
+					<feature name="Person Meta-Data"/>
+					<feature name="User Role"/>
+				</and>
+				<and name="Specification of System type">
+					<and name="Blog">
+						<feature name="Clustering of the"/>
+					</and>
+					<feature name="Social"/>
+					<feature name="Chat"/>
+				</and>
+				<alt name="Data Transfer">
+					<feature mandatory="true" name="unsecure"/>
+					<feature mandatory="true" name="secure"/>
+				</alt>
 			</and>
 		</struct>
-		<constraints>
-			<rule>
-				<disj>
-					<conj>
-						<var>accounting</var>
-						<conj>
-							<var>Distribution</var>
-							<var>Blog</var>
-						</conj>
-					</conj>
-					<disj>
-						<var>Chat</var>
-						<var>Social</var>
-					</disj>
-				</disj>
-			</rule>
-		</constraints>
+		<constraints/>
 		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
 		<comments/>
 		<featureOrder userDefined="false"/>
