@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-	<featureModel chosenLayoutAlgorithm="1">
+	<featureModel chosenLayoutAlgorithm="4">
 		<struct>
 			<and abstract="true" mandatory="true" name="Chat-Blog-Client">
 				<description>
 					Dieses Modell stellt eine Software produktlinie für Software zum Aufsetzten eines Chats oder eines Blogs oder eine Kombination aus beidem
-					
 				</description>
 				<and mandatory="true" name="Identification">
 					<description>
@@ -47,7 +46,6 @@
 				<and mandatory="true" name="Content of Account">
 					<description>
 						Der Inahlt eines Accounts kann verschiedene Informationen umfassen
-						
 					</description>
 					<feature mandatory="true" name="Account name">
 						<description>
