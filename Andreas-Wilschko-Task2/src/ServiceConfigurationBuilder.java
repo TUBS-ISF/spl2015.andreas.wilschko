@@ -33,20 +33,7 @@ public class ServiceConfigurationBuilder {
 		createOutputFile(configurationJSON.toString());
 	}
 
-	private boolean createOutputFile(String configOutput) {
-		File configOutputFile = new File ("config.json");
-		boolean successfullyWritten=false;
-		try {
-			FileWriter fileWriter = new FileWriter(configOutputFile,false);
-			fileWriter.append(configOutput);
-			fileWriter.flush();
-			successfullyWritten=true;
-			fileWriter.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return successfullyWritten;
+	
 	}
 
 }
