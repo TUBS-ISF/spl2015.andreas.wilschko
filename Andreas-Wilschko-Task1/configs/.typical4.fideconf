@@ -1,33 +1,88 @@
-# Lists all features from the model with manual (first digit) and automatic (second digit) selection
-# 0 = deselected, 1 = selected, 2 = undefined
+Blog
+Chat
+#
+Lists
+all
+features
+from
+the
+model
+with
+manual
+(first
+digit)
+and
+automatic
+(second
+digit)
+selection
+#
+0
+=
+deselected,
+1
+=
+selected,
+2
+=
+undefined
 21Chat-Blog-Client
 11Identification
 11Login
-21Create Account
-21Distribution of History
+21Create
+Account
+21Distribution
+of
+History
 20unsaved
-12locally saved
-20saved on Server
-21Content of Account
-21Account name
+12locally
+saved
+20saved
+on
+Server
+21Content
+of
+Account
+21Account
+name
 22Emailadress
 22Picture
-22Person Meta-Data
-22User Role
-21Data/Message Transfer
+22Person
+Meta-Data
+22User
+Role
+21Data/Message
+Transfer
 20unsecure
 12secure
-21Specification of System type
+21Specification
+of
+System
+type
 11Blog
-21Clustering of the Blog
+21Clustering
+of
+the
 21Domains
-21Topics of Entries
-22Adding Content to Topics within Blog
-12subscribe to Topic
+21Topics
+of
+Entries
+22Adding
+Content
+to
+Topics
+within
+Blog
+12subscribe
+to
+Topic
 22Chat
 22Visibility
-22public Chat
-22private Chat
-22Chat options
-222 Persons
+22public
+22private
+Chat
+22Chat
+options
+222
+Persons
 22Group

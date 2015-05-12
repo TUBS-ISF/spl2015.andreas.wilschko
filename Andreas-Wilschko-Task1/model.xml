@@ -14,14 +14,14 @@
 							Der login einer Person besteht aus jeweils einen Nutzernamen und einem Password
 						</description>
 					</feature>
-					<feature mandatory="true" name="Create Account">
+					<feature name="Create_Account">
 						<description>
 							Das Erstellen eines Nutzers durch eine noch nicht eingetragene Person
 							soll möglich sein
 						</description>
 					</feature>
 				</and>
-				<alt mandatory="true" name="Distribution of History">
+				<alt mandatory="true" name="Distribution_of_ History">
 					<description>
 						Der Inhalt von Nachrichtenverläufen kann auf mehrere Arten
 						 gespeichert werden
@@ -31,23 +31,23 @@
 							Nachrichtenverläufe werden nicht erfasst
 						</description>
 					</feature>
-					<feature mandatory="true" name="locally saved">
+					<feature mandatory="true" name="locally_saved">
 						<description>
 							Nachrichtenverläufe werden lokal bei allen Personen, 
 							die die Nachricht senden/empfangen gespeichert
 						</description>
 					</feature>
-					<feature mandatory="true" name="saved on Server">
+					<feature mandatory="true" name="save_on_Server">
 						<description>
 							Nachrichtenverläufe werden auf dem Server gespeichert
 						</description>
 					</feature>
 				</alt>
-				<and mandatory="true" name="Content of Account">
+				<and mandatory="true" name="Content_of_Account">
 					<description>
 						Der Inahlt eines Accounts kann verschiedene Informationen umfassen
 					</description>
-					<feature mandatory="true" name="Account name">
+					<feature mandatory="true" name="Account_name">
 						<description>
 							Der Accountname eines Benutzers
 						</description>
@@ -62,18 +62,18 @@
 							Das Bild eines Nutzers
 						</description>
 					</feature>
-					<feature name="Person Meta-Data">
+					<feature name="Person_Meta-Data">
 						<description>
 							Meta-Infos zum Nutzer (Name, Geschlecht, Alter, etc.)
 						</description>
 					</feature>
-					<feature name="User Role">
+					<feature name="User_Role">
 						<description>
 							Die Rolle und die Rechte über die ein Account verfügt( Admin, Moderator, etc.)
 						</description>
 					</feature>
 				</and>
-				<alt mandatory="true" name="Data/Message Transfer">
+				<alt mandatory="true" name="Data/Message_Transfer">
 					<description>
 						Der Nachrichtentransfer zwischen Server und Client
 					</description>
@@ -88,7 +88,7 @@
 						</description>
 					</feature>
 				</alt>
-				<or mandatory="true" name="Specification of System type">
+				<or mandatory="true" name="Specification_of_System_type">
 					<description>
 						Die eigentliche Aufgabe/n der Software
 					</description>
@@ -96,7 +96,7 @@
 						<description>
 							Implementierung eines Blogs
 						</description>
-						<and mandatory="true" name="Clustering of the Blog">
+						<and mandatory="true" name="Clustering_of_the_Blog">
 							<description>
 								Die Strukturierung des Blogs
 							</description>
@@ -104,20 +104,20 @@
 								<description>
 									Die Domäne (Probleme, Wiki, etc) als oberste Struktur
 								</description>
-								<feature mandatory="true" name="Topics of Entries">
+								<feature mandatory="true" name="Topics_of_Entries">
 									<description>
 										Konkrete Themen innerhalb der Domänen
 									</description>
 								</feature>
 							</and>
 						</and>
-						<feature name="Adding Content to Topics within Blog">
+						<feature name="Adding_Content_to_Topics_within_Blog">
 							<description>
 								Neue Themen können von bestimmten Nutzern hinzugefügt
 								werden
 							</description>
 						</feature>
-						<feature name="subscribe to Topic">
+						<feature name="subscribe_to_Topic">
 							<description>
 								Nutzer können Nachrichten erhalten, wenn neue Beiträge zu einem Thema getätigt werden
 							</description>
@@ -131,22 +131,22 @@
 							<description>
 								Die Sichtbarkeit des Chats
 							</description>
-							<feature name="public Chat">
+							<feature name="public_Chat">
 								<description>
 									ein öffentlicher Chat
 								</description>
 							</feature>
-							<feature name="private Chat">
+							<feature name="private_Chat">
 								<description>
 									ein privater Chat
 								</description>
 							</feature>
 						</and>
-						<and mandatory="true" name="Chat options">
+						<and mandatory="true" name="Chat_options">
 							<description>
 								Die Optionen des Aufbaus des Chats (1..1, N..N, etc)
 							</description>
-							<feature name="2 Persons">
+							<feature name="two_Persons">
 								<description>
 									simpler 2 Personen Chat
 								</description>
